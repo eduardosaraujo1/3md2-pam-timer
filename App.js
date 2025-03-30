@@ -54,7 +54,7 @@ const App = () => {
             {status ? "Parar" : "Iniciar"}
           </Text>
         </Pressable>
-        <Pressable onPress={() => setCount(0)}>
+        <Pressable onPress={() => {setCount(0); setStatus(false)}}>
           <Text style={styles.button}>Redefinir</Text>
         </Pressable>
       </View>
@@ -64,6 +64,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
     padding: 12,
     marginBlock: 64,
   },
